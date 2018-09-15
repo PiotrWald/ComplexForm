@@ -23,9 +23,9 @@
     + slim
 
   2. Creating ActiveRecord objects and related tables
-    - Company model
-    - Address model
-    - Adding new columns do user model
+    + Company model
+    + Address model
+    + Adding new columns do user model
 
   3. Tests for validity of models
     - tests for Company
