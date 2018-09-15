@@ -13,15 +13,14 @@
   - devise - not neccassary for this project, but I choose it as my preference
   - slim - templating language
 
-#TODO
+#TODO 
 
   1. Project configuration setup and gem installation
-    - rspec
-    - simple_form
-    - rspec
-    - bootstrap 4
-    - devise
-    - slim
+    + rspec
+    + simple_form
+    + bootstrap 4
+    + devise
+    + slim
 
   2. Creating ActiveRecord objects and related tables
     - Company model
