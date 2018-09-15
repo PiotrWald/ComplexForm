@@ -30,12 +30,12 @@
   3. Tests for validity of models
     - tests for Company
     - tests for Address
-    - tests for User 
+    + tests for User 
 
   4. Implementing validataions for:
     - Company
     - Address
-    - User
+    + User
 
   5. Tests for served html files
     - correct status code

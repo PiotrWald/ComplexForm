@@ -8,7 +8,7 @@ RSpec.describe User, type: :model do
   describe 'creation' do
     context 'with valid params' do
       it 'should pass validaton' do
-        expect { @user.save }.to_not raise_error
+        expect { @user.save! }.to_not raise_error
       end
 
       it 'should pass validation when birth_date is empty' do

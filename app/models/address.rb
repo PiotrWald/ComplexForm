@@ -1,4 +1,4 @@
 class Address < ApplicationRecord
-  belongs_to :user
-  belongs_to :company
+  has_one :user
+  has_one :company
 end
