@@ -29,5 +29,6 @@ module ComplexForm
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    #require Rails.root.join('app', 'validators', 'birth_date_validator.rb').to_s
   end
 end

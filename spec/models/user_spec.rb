@@ -59,19 +59,13 @@ RSpec.describe User, type: :model do
 
       it 'should fail validaton when email is incorrect #2 case' do
         user = FactoryBot.build(:user)
-        user.email = 'example@com'
-        expect { user.save! }.to raise_error( ActiveRecord::RecordInvalid )
-      end
-
-      it 'should fail validation when birth_date isnt in correct format' do
-        user = FactoryBot.build(:user)
-        user.birth_date = '1232321443'
+        user.email = 'example@'
         expect { user.save! }.to raise_error( ActiveRecord::RecordInvalid )
       end
 
       it 'should fail validation when birth_date isnt in the past' do
         user = FactoryBot.build(:user)
-        user.birth_date = 'example@com'
+        user.birth_date = Date.tomorrow
         expect { user.save! }.to raise_error( ActiveRecord::RecordInvalid )       
       end
 
