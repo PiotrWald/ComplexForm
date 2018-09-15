@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :address do
     street { 'Rose street' }
-    country { 'PL' }
-    city { 'Warsaw' }
-    zip_code { '02-300' }
+    country { 'US' }
+    city { 'New York' }
+    zip_code { '12523-1235' }
   end
 end
 

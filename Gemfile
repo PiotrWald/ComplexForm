@@ -18,6 +18,8 @@ gem 'simple_form'
 gem 'devise'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'phonelib'
+gem 'country_select', '~> 3.1'
+gem 'validates_zipcode'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

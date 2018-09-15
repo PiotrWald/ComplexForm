@@ -45,10 +45,3 @@ RSpec.describe Address, type: :model do
     end
   end
 end
-
-# ● Pole Street​wewnątrz Address​jest obowiązkowe
-# ● Pole City​wewnątrz Address​jest obowiązkowe
-# ● Pole Zip code​wewnątrz Address​jest obowiązkowe
-# ● Pole Zip code​wewnątrz Address​musi zawierać prawidłowy kod pocztowy
-# ● Pole Country​wewnątrz Address​jest obowiązkowe
-# ● Pole Country​wewnątrz Address​musi zawierać prawidłową nazwę kraju
