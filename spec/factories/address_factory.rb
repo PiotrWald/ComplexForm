@@ -6,4 +6,3 @@ FactoryBot.define do
     zip_code { '12523-1235' }
   end
 end
-
