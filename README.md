@@ -28,12 +28,12 @@
     + Adding new columns do user model
 
   3. Tests for validity of models
-    - tests for Company
+    + tests for Company
     + tests for Address
     + tests for User 
 
   4. Implementing validataions for:
-    - Company
+    + Company
     + Address
     + User
 

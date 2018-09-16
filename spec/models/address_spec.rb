@@ -7,6 +7,10 @@ RSpec.describe Address, type: :model do
     end
 
     context 'for user' do
+      before(:each) do
+        user = FactoryBot.create(:user).address = @address
+      end
+
       context 'with vaild params' do
         it 'should pass validation' do
           expect { @address.save! }.to_not raise_error
@@ -47,23 +51,27 @@ RSpec.describe Address, type: :model do
     end
 
     context 'for company' do
+      before(:each) do
+        company = FactoryBot.create(:company).address = @address
+      end
+
       context 'with valid params' do
         it 'should not raise error when street is empty' do
           @address.street = nil
           expect { @address.save! }.to_not raise_error
         end
 
-        it 'should not raise error when street is empty' do
+        it 'should not raise error when zip_code is empty' do
           @address.zip_code = nil
           expect { @address.save! }.to_not raise_error
         end
 
-        it 'should not raise error when street is empty' do
+        it 'should not raise error when country is empty' do
           @address.country = nil
           expect { @address.save! }.to_not raise_error
         end
 
-        it 'should not raise error when street is empty' do
+        it 'should not raise error when city is empty' do
           @address.city = nil
           expect { @address.save! }.to_not raise_error
         end
