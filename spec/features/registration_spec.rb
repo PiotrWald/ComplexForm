@@ -1,17 +1,16 @@
 describe "resgistrarion process", type: :feature do
   before(:each) do
     visit '/'
-    @elements = {'Sign up' => nil,
-                'Email' => 'test@test.com',
+    @elements = {'Email' => 'test@test.com',
                 'First name' => 'Joe',
                 'Last name' => 'Doe',
-                'Log in' => nil,
-                'Company' => 'Company ABC',
+                'Company' => nil,
+                'Name' => 'Company ABC',
                 'Address' => nil,
                 'Phone number' => '+1-541-754-3010',
-                'ZIP code' => '12523-1235',
+                'Zip code' => '12523-1235',
                 'City' => 'New York',
-                'Country' => 'US'}
+                'Country' => nil}
   end
 
   context 'page has loaded properly' do
@@ -33,10 +32,10 @@ describe "resgistrarion process", type: :feature do
   context 'filling out form and submiting' do
     context 'correctly' do
       it 'should return successful response' do
-        @elements.each do |element, content|
-          fill_in( element, with: content ) unless content.nil?
+        @elements.each do |field, content|
+          fill_in( field, with: content ) unless content.nil?
         end
-        click_button 'Sign in'
+        click_button 'Sign up'
         expect(page).to have_http_status(:ok)
       end
     end

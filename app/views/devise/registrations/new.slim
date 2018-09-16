@@ -1,0 +1,29 @@
+h2 Sign up
+
+= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+  = f.error_notification 
+  = f.input :email,
+          required: true,
+          autofocus: true ,
+          input_html: { autocomplete: "email" },
+          class: "form-control"
+  = f.input :first_name
+  = f.input :last_name
+  = f.input :phone_number
+  = f.input :birth_date
+  = f.fields_for :address, @address do |ua|
+    = ua.input :city
+    = ua.input :country
+    = ua.input :zip_code
+    = ua.input :street
+  h3 Company
+
+  = f.fields_for :company, @company do |c|
+    = c.input :name
+    p Address
+    = c.fields_for :address, @address do |ca|
+      = ca.input :city
+      = ca.input :country
+      = ca.input :zip_code
+      = ca.input :street
+  = f.button :submit, "Sign up"

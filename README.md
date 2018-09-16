@@ -38,13 +38,15 @@
     + User
 
   5. Tests for served html files
-    - correct status code
-    - content on the page
+    + correct status code
+    + content on the page
 
   6. Creating controller and view
     - controller with method associated to form
     - view for this method using simple_from and slim
 
-  7. (Optional) Capybara testing for forms
+  7. Deploy on Heroku
+
+  8. Setup steps in README
 
 
