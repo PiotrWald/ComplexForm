@@ -1,51 +1,39 @@
 # README
 
+You can see app deployed on heroku here: https://complexform.herokuapp.com/
+
 * Recruitment task for Chimera Prime. Goal is to build complex form and related datamodel.
 
 * Usage of gems and TDD is recommended
 
-* My choice for technlogies are
+* My choice for technlogies is
   - database=postgresql
   - rspec - testing framework
   - simple_form - form framework
   - bootstrap 4 - front
   - heroku - for deploy
   - slim - templating language
+  - phonelib - validations of phone numbers
+  - validates_zipcode - validations of zip code depending on the country
 
-#TODO 
+#SETUP
 
-  1. Project configuration setup and gem installation
-    + rspec
-    + simple_form
-    + bootstrap 4
-    + devise
-    + slim
+1. Write in terminal
 
-  2. Creating ActiveRecord objects and related tables
-    + Company model
-    + Address model
-    + Adding new columns do user model
+`git clone https://github.com/PiotrWald/ComplexForm`
 
-  3. Tests for validity of models
-    + tests for Company
-    + tests for Address
-    + tests for User 
+2. Inside app direcotry run
 
-  4. Implementing validataions for:
-    + Company
-    + Address
-    + User
+`bundle install`
 
-  5. Tests for served html files
-    + correct status code
-    + content on the page
+3. Next
 
-  6. Creating controller and view
-    - controller with method associated to form
-    - view for this method using simple_from and slim
+`rails db:migrate`
 
-  7. Deploy on Heroku
+4. Finally to start rails server
 
-  8. Setup steps in README
+`rails s`
 
+5. Visit in your brwoser
 
+`http://localhost:3000/`
