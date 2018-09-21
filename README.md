@@ -16,7 +16,7 @@ You can see app deployed on heroku here: https://complexform.herokuapp.com/
   - phonelib - validations of phone numbers
   - validates_zipcode - validations of zip code depending on the country
 
-#SETUP
+# SETUP
 
 1. Write in terminal
 
@@ -30,7 +30,7 @@ You can see app deployed on heroku here: https://complexform.herokuapp.com/
 
 `rails db:migrate`
 
-4. Finally to start rails server
+4. Finally start the rails server
 
 `rails s`
 
