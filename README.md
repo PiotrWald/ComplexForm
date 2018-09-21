@@ -10,7 +10,6 @@
   - simple_form - form framework
   - bootstrap 4 - front
   - heroku - for deploy
-  - devise - not neccassary for this project, but I choose it as my preference
   - slim - templating language
 
 #TODO 

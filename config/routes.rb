@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  devise_for :users, controllers: {
-        registrations: 'users/registrations'
-      }
-
-  devise_scope :user do
-    root to: "users/registrations#new"
-  end
+  resources :users, only: [:new, :create, :destroy, :index]
+  root 'users#new'
 end

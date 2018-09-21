@@ -1,0 +1,33 @@
+h2
+  strong Sign up
+
+= simple_form_for(@user) do |f|
+  = f.error_notification 
+  = f.input :email
+  = f.input :first_name
+  = f.input :last_name
+  = f.input :phone_number
+  = f.input :birth_date, include_blank: true,
+                         start_year: Date.today.year,
+                         end_year: Date.today.year - 100,
+                         order: [:day, :month, :year]
+  p
+    strong Address
+  = f.fields_for :address do |ua|
+    = ua.input :city
+    = ua.input :country
+    = ua.input :zip_code
+    = ua.input :street
+  h3
+    strong Company
+
+  = f.fields_for :company do |c|
+    = c.input :name
+    p
+      strong Comapny address
+    = c.fields_for :address do |ca|
+      = ca.input :city
+      = ca.input :country
+      = ca.input :zip_code
+      = ca.input :street
+  = f.button :submit, "Sign up", class: "btn btn-success"

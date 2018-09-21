@@ -1,6 +1,6 @@
 class Address < ApplicationRecord
-  has_one :user
-  has_one :company
+  belongs_to :user, optional: true
+  belongs_to :company, optional: true
 
   validates_presence_of :street, :city, :zip_code, :country, if: :for_user?
   validates :country, inclusion:{ in:ISO3166::Country.all.map(&:alpha2) }, allow_blank: true
