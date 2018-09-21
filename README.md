@@ -15,7 +15,7 @@ https://github.com/dgilperez/validates_zipcode/blob/master/docs/postalCodeData.x
 
 * Usage of gems and TDD is recommended
 
-* My choice for technlogies is
+* Technologies(gems) used
   - database=postgresql
   - rspec - testing framework
   - simple_form - form framework
