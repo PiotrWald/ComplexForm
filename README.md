@@ -9,7 +9,7 @@ You can see app deployed on heroku here: https://complexform.herokuapp.com/
 https://github.com/dgilperez/validates_zipcode/blob/master/docs/postalCodeData.xml
 
 
-
+## General info
 
 * Recruitment task for Chimera Prime. Goal is to build complex form and related datamodel.
 
