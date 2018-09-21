@@ -4,7 +4,9 @@ You can see app deployed on heroku here: https://complexform.herokuapp.com/
 
 **IMPORTANT**
 
-*Zip code for Poland is not correctly validated due to error in regex*
+*Zip code for Poland is not correctly validated due to error in regex in gem*
+https://github.com/dgilperez/validates_zipcode
+
 
 * Recruitment task for Chimera Prime. Goal is to build complex form and related datamodel.
 
