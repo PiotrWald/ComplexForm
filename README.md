@@ -3,6 +3,7 @@
 You can see app deployed on heroku here: https://complexform.herokuapp.com/
 
 **IMPORTANT**
+
 *Zip code for Poland is not correctly validated due to error in regex*
 
 * Recruitment task for Chimera Prime. Goal is to build complex form and related datamodel.
