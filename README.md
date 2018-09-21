@@ -31,7 +31,7 @@ https://github.com/dgilperez/validates_zipcode/blob/master/docs/postalCodeData.x
 
 `git clone https://github.com/PiotrWald/ComplexForm`
 
-2. Inside app direcotry run
+2. Inside ComplexForm direcotry run
 
 `bundle install`
 
