@@ -1,0 +1,10 @@
+tr
+  th scope="row" = user.id
+  td = user.email
+  td = user.first_name
+  td = user.last_name
+  td = user.phone_number
+  td = user.birth_date
+  td = user.address.present?
+  td = user.company.present?
+  td = user.company.address.present? if user.company.present?

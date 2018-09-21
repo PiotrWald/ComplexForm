@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   include ActiveModel::Validations
-  has_one :address
-  has_one :company
+  has_one :address, dependent: :delete
+  has_one :company, dependent: :delete
   accepts_nested_attributes_for :address, allow_destroy: true, reject_if: :all_blank
   accepts_nested_attributes_for :company, allow_destroy: true, reject_if: :all_blank
 

@@ -17,11 +17,12 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.delete_all
+    User.find(params[:id]).destroy
+    redirect_to users_path
   end
 
   def index
-    @users = User.all
+    @users = User.all.includes(:address, {company: :address})
   end
 
   private

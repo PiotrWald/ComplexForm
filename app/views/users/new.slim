@@ -3,9 +3,9 @@ h2
 
 = simple_form_for(@user) do |f|
   = f.error_notification 
-  = f.input :email
-  = f.input :first_name
-  = f.input :last_name
+  = f.input :email, required: false
+  = f.input :first_name, required: false
+  = f.input :last_name, required: false
   = f.input :phone_number
   = f.input :birth_date, include_blank: true,
                          start_year: Date.today.year,
@@ -28,6 +28,6 @@ h2
     = c.fields_for :address do |ca|
       = ca.input :city
       = ca.input :country
-      = ca.input :zip_code
+      = ca.input :zip_code, label: 'ZIP code'
       = ca.input :street
   = f.button :submit, "Sign up", class: "btn btn-success"

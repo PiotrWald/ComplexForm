@@ -1,16 +1,13 @@
 describe "resgistrarion process", type: :feature do
   before(:each) do
     visit '/'
-    @elements = {'Email' => 'test@test.com',
+    @elements = {'Email' => 'test122@test.com',
                 'First name' => 'Joe',
                 'Last name' => 'Doe',
                 'Company' => nil,
                 'Name' => 'Company ABC',
                 'Address' => nil,
-                'Phone number' => '+1-541-754-3010',
-                'Zip code' => '12523-1235',
-                'City' => 'New York',
-                'Country' => nil}
+                'Phone number' => '+1-541-754-3010',}
   end
 
   context 'page has loaded properly' do
@@ -36,7 +33,7 @@ describe "resgistrarion process", type: :feature do
           fill_in( field, with: content ) unless content.nil?
         end
         click_button 'Sign up'
-        expect(page).to have_http_status(:ok)
+        expect(page).to have_content('New user')
       end
     end
   end
