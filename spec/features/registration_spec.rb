@@ -1,12 +1,12 @@
 describe "resgistrarion process", type: :feature do
   before(:each) do
     visit '/'
-    @elements = {'Email' => 'test122@test.com',
+    User.destroy_all
+
+    @elements = {'Email' => 'test@test.com',
                 'First name' => 'Joe',
                 'Last name' => 'Doe',
-                'Company' => nil,
                 'Name' => 'Company ABC',
-                'Address' => nil,
                 'Phone number' => '+1-541-754-3010',}
   end
 
@@ -19,7 +19,7 @@ describe "resgistrarion process", type: :feature do
       expect(page).to have_content 'Sign up'
     end
 
-    it 'has all form elements' do
+    it 'has form elements' do
       @elements.each_key do |element|
         expect(page).to have_content(element)
       end
@@ -28,9 +28,9 @@ describe "resgistrarion process", type: :feature do
 
   context 'filling out form and submiting' do
     context 'correctly' do
-      it 'should return successful response' do
+      it 'should redirect to /users' do
         @elements.each do |field, content|
-          fill_in( field, with: content ) unless content.nil?
+          fill_in( field, with: content )
         end
         click_button 'Sign up'
         expect(page).to have_content('New user')
