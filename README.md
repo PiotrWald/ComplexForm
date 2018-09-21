@@ -25,7 +25,7 @@ https://github.com/dgilperez/validates_zipcode/blob/master/docs/postalCodeData.x
   - phonelib - validations of phone numbers
   - validates_zipcode - validations of zip code depending on the country
 
-## SETUP
+## Setup
 
 1. Write in terminal
 
